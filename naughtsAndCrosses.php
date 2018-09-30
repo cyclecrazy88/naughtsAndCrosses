@@ -109,7 +109,9 @@ class NaughtsAndCrossesGame{
 		if ( $cordX < count($this->boardMapping) ){
 			$cordYData = $this->boardMapping[$cordX];
 			if ($cordY < count($cordYData)){
-				$this->boardMapping[$cordX][$cordY]=$value;
+				# Only allow if the position hasn't been set yet.
+				if (strlen($this->boardMapping[$cordX][$cordY])==0)
+					$this->boardMapping[$cordX][$cordY]=$value;
 				#print("\nValueSet: ". $value);
 				logActivity("\nValueSet: ". $value);
 			}
@@ -129,7 +131,8 @@ class NaughtsAndCrossesGame{
 		if ($move != null){
 			$playerColour = $computerPlayer->getComputerPlayerColour();
 			#print('CordX: '.$move[0]. " CordY: ". $move[1] . " Colour: ".$playerColour );
-			$this->boardMapping[$move[0]][$move[1]]=$playerColour;
+			if (strlen($this->boardMapping[$move[0]][$move[1]])==0 )
+				$this->boardMapping[$move[0]][$move[1]]=$playerColour;
 		}		
 		else{
 			#print("Game Finished.");
