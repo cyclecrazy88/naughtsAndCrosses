@@ -60,11 +60,48 @@ Control page for the management of the styles in the page.
 	visibility:hidden;
 	}
 
+#gameHistory{
+	position:absolute;
+	top:2px;
+	height:400px;
+	width:400px;
+	left:550px;
+	/*background-color:lightGreen;*/
+	font-size:1.75em;
+	color:blue;
+	text-align:left;		
+	overflow:auto;
+}
+
+#historyDisplay{
+	position:absolute;
+	top:50px;
+	left:0px;
+	height:300px;
+	width:300px;
+	border-style:solid;
+	border-color:darkgrey;
+	color:blue;
+	overflow:auto;
+	}
+
 .cellType{
 	width:98px;
 	height:98px;
 	background-color:lightblue;
 	}
+
+.textStyle{
+	color:blue;	
+	}
+
+.textStyle2{
+	color:black;	
+	}
+
+.tableBorder , th, td {
+	border:1px solid darkgrey;
+}
 
 #cell0_0{	position:absolute; left:1px; top:1px;	}
 #cell0_1{	position:absolute; left:100px; top:1px;	}

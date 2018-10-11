@@ -2,6 +2,9 @@ Design Notes for Naughts and Crosses
 
 The game of Naughts and crosses is a simplistic example of the game with a PHP server for most of the calculations (including a computer player) and a simply HTML, CSS, JavaScript interface to support the player.
 
+Game Loading.
+	The game itself should be loaded via Index.html which will call the downstream PHP scripts to load it's content data.
+
 PHP Server.
 Control of the ‘game’ is centrally controlled by a text file in the directory ‘gameData’.
 Each game has it’s own ‘name’, which allows the server to control the game and be persistant with regards to it’s name.

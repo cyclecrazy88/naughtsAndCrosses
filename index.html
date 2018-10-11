@@ -5,6 +5,7 @@
 	<script type="text/javascript" src="./scripts/jquery-3.3.1.js"></script>
 	<script type="text/javascript" src="./scripts/cntrlScript.js"></script>
 	<script type="text/javascript" src="./scripts/gameComplete.js"></script>
+	<script type="text/javascript" src="./scripts/gameHistoryControl.js"></script>
 </head>
 <body>
 	<div id="heading">
@@ -36,7 +37,31 @@
 		To play Naughts and Crosses simply click on a piece, the computer player will automatically update the board and make a choice of which move it would like to make.
 		</div>
 
+		<div id="gameHistory">
+			Game History
+
+			<div id="historyDisplay">
+				<table width="100%" class="tableBorder" >
+					<tr>
+						<td  width="100%" colspan="2" class="textStyle2">Item Summary</td>
+					</tr>
+					<tr>
+						<td class="textStyle2" width="50%">Average (Computer Player)</td><td id="averageRed" width="50%" class="textStyle"></td>						
+					</tr>
+					<tr>
+						<td class="textStyle2" width="50%">Average (User Player)</td><td id="averageBlue" width="50%" class="textStyle"></td>						
+					</tr>
+				</table>
+
+				<table width="100%" class="tableBorder" id="gameDetails">
+					
+				<table>
+
+			</div>
+
+		</div>
+
 	</div>
-	<div id="pageFooter">Footer</div>
+	<div id="pageFooter"></div>
 </body>
 </html>

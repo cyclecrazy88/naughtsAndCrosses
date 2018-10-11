@@ -51,6 +51,7 @@ function gameControl(gameName){
 
 	}
 }
+
 /***********************************
 	Function - buttonClickScript.
 		This is utility function. Its here to allow a decision to be made
@@ -78,9 +79,21 @@ function buttonClickScript(action){
 							$('#completeNotice').css('visibility','visible')
 						}
 
+
+						// Send another request to the server and update the boardgame details.
+						updateGameDetails();
+
 					}});
 	}
 	setupButtonBindings()
+}
+
+function updateGameDetails(){
+	$.getJSON("http://localhost/previousGameDetails.php",
+		function(responseData){
+			console.log("Response: ",responseData);
+			gameHistoryControl(responseData);
+		});
 }
 
 function loadGame(){
@@ -96,5 +109,9 @@ function loadGame(){
 				window.gameObject = new gameControl(responseData.gameCode)
 			}
 	})
+	// Initialise and load the game details.
+	updateGameDetails();
+
+
 }
 

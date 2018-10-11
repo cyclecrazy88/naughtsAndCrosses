@@ -1,1 +1,1 @@
-[["","blue",""],["red","blue",""],["red","blue","red"]]
+[["blue","blue","red"],["blue","blue","red"],["red","red","blue"]]
