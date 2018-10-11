@@ -14,3 +14,8 @@ Simple pictures are provided to create a simple interface for the user with the 
 A simple look up is made in the browser to display a message to the user and indicate if a game has been completed or not. Once completed, a message is displayed to inform the user.
 Each image is clickable and will send request to the server to deduce if the next requested move can be made. The result is then automatically updated on the screen with for the user to see.
 
+Game Information.
+	On the right handside the game information is automatically updated, this includes a current listing of all of the individual games played, summary for the result and counter information for each individual game.
+
+Updates/Count summary details are automatically collected from local JSON files stored in the 'gameData' folder.
+
